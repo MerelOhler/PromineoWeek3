@@ -20,7 +20,6 @@ public class Week3 {
 		System.out.println("today's date " + dayOfMonthToday + " tomorrow's date " + dayOfMonthTomorrow);
 		Scanner s = new Scanner(System.in);
 		
-		
 		ageOperations(ages);
 		
 		System.out.println();
@@ -71,21 +70,15 @@ public class Week3 {
 
 	//uses given array of ages and subtracts ages from each other 
 	//as well as finds the average of the ages
-	public static void ageOperations(int[] ages) {
-				
-		System.out.println("Last age minus first age is equal to " + subtractFirstLast(ages));
+	public static void ageOperations(int[] ages) {	
+		System.out.println("Last age minus first age is equal to " + (ages[ages.length - 1] - ages[1]));
 		
 		ages = Arrays.copyOf(ages, ages.length + 1);
 	    ages[ages.length - 1] = 32;
 	    
-	    System.out.println("After adding another age, the last age minus first age is now equal to " + subtractFirstLast(ages));
+	    System.out.println("After adding another age, the last age minus first age is now equal to " + (ages[ages.length - 1] - ages[1]));
 	    
 	    System.out.println("The average age is " + averageIntArray(ages));
-	}
-	
-	//finds the result when we subtract the first age from the last age
-	public static int subtractFirstLast (int[] arr) {
-		return (arr[arr.length - 1] - arr[1]);
 	}
 	
 	//finds the average of an int array
@@ -185,10 +178,12 @@ public class Week3 {
 		return averageDoubleArray(array1) > averageDoubleArray(array2);
 	}
 	
+	//Will return true if it's hot outside and if you have more than $10.50 in your pocket
 	public static boolean willBuyDrink(boolean isHotOutside, double moneyInPocket) {
 		return (isHotOutside == true && moneyInPocket > 10.5);
 	}
 	
+	//Let's the user know if they are able to water the lawn today
 	public static String waterLawn (int dayOfMonthToday, int dayOfMonthTomorrow) {
 		if (dayOfMonthToday % 2 == 1) {
 			if (dayOfMonthTomorrow % 2 == 1) {
