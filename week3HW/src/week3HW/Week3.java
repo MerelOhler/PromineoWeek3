@@ -17,7 +17,6 @@ public class Week3 {
 		tomorrow.add(Calendar.DATE, 1);
 		int dayOfMonthToday = today.get(Calendar.DAY_OF_MONTH);
 		int dayOfMonthTomorrow = tomorrow.get(Calendar.DAY_OF_MONTH);
-		System.out.println("today's date " + dayOfMonthToday + " tomorrow's date " + dayOfMonthTomorrow);
 		Scanner s = new Scanner(System.in);
 		
 		ageOperations(ages);
